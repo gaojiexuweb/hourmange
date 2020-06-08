@@ -5,6 +5,7 @@
   </div>
 </template>
 <script>
+import api from "@/api/user.js";
 export default {
   name: "Payment",
   props: {
@@ -15,6 +16,15 @@ export default {
   },
   data() {
     return {};
+  },
+  created() {
+    let data = {
+      username: "admin",
+      password: "111111"
+    };
+    api.abandonInfo(`/api-auth/oauth/token`, data, "post").then(res => {
+      console.log(res);
+    });
   },
   methods: {}
 };

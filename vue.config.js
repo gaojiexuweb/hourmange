@@ -15,6 +15,6 @@ module.exports = {
     outputDir: "hourmange", //输出目录
     productionSourceMap: false,//打包时不生产.map文件  
     devServer: {
-        proxy: 'http://localhost:4000'
+        proxy: 'http://172.16.2.222:10100'
     }
 }
