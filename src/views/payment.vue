@@ -2,10 +2,14 @@
   <div class="about">
     <h1>支付</h1>
     <h1>{{food}}</h1>
+    <h1>{{$store.state.menuName}}</h1>
+    <button @click="handle1">更改菜单名称</button>
+    <button @click="handle2">更改菜单名称</button>
   </div>
 </template>
 <script>
-import api from "@/api/user.js";
+import {abandonInfo} from "@/api/user.js";
+import { mapActions } from "vuex";
 export default {
   name: "Payment",
   props: {
@@ -22,11 +26,19 @@ export default {
       username: "admin",
       password: "111111"
     };
-    api.abandonInfo(`/api-auth/oauth/token`, data, "post").then(res => {
+    abandonInfo(data).then(res => {
       console.log(res);
     });
   },
-  methods: {}
+  methods: {
+    ...mapActions(["menuName"]),
+    handle1() {
+      this.menuName("陈洁");
+    },
+    handle2() {
+      this.menuName("韦苗苗");
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>

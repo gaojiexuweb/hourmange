@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import store from '@/store'
 import routes from './router'
-import {setTitle} from '@/lib/util'
+import { setTitle } from '@/lib/util'
 
 Vue.use(VueRouter)
 const originalPush = VueRouter.prototype.push
@@ -15,7 +16,7 @@ const router = new VueRouter({
   routes
 })
 
-const HAS_LOGINED = true
+const HAS_LOGINED = store.state.loginSuccess;
 // 路由守位
 router.beforeEach((to, from, next) => {
   to.meta && to.meta.title && setTitle(to.meta.title)
@@ -32,7 +33,7 @@ router.beforeEach((to, from, next) => {
 // router.beforeResolve()
 
 // 后置钩子
-router.afterEach((to,from)=>{
+router.afterEach((to, from) => {
   // logining = false
 })
 

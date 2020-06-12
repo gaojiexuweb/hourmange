@@ -1,14 +1,5 @@
-import axios from './index'
+import { get, post } from './index'
 
-function doRequest(url, data, method) {
-    return axios.request({
-        url,
-        data,
-        method,
-    })
-}
-export default {
-    abandonInfo(url, data, method) {
-        return doRequest(url, data, method)
-    }
+export const abandonInfo = (params) => {
+    return post(`/api-auth/oauth/token`, params)
 }
