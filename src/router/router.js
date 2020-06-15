@@ -1,4 +1,4 @@
-import Index from '../views/index.vue'
+import layout from '../views/layout.vue'
 
 
 export default [
@@ -15,7 +15,7 @@ export default [
         path: '/index',
         alias: '/index_page',
         name: 'index',
-        component: Index,
+        component: layout,
         children: [
             {
                 path: 'statement',

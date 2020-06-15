@@ -26,9 +26,9 @@ export default {
       username: "admin",
       password: "111111"
     };
-    abandonInfo(data).then(res => {
-      console.log(res);
-    });
+    // abandonInfo(data).then(res => {
+    //   console.log(res);
+    // });
   },
   methods: {
     ...mapActions(["menuName"]),

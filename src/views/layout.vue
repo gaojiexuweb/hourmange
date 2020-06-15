@@ -1,5 +1,5 @@
 <template>
-  <div class="index">
+  <div class="layout">
     <HeaderBar />
     <div class="main">
       <AsideBar></AsideBar>
@@ -48,7 +48,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.index {
+.layout {
   height: 100%;
   .main {
     height: calc(100% - 50px);

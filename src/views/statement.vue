@@ -76,59 +76,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .statement {
-  height: 100%;
-  .page-search-card {
-    min-height: 60px;
-    margin-top: 8px;
-    .el-form-item--mini.el-form-item,
-    .el-form-item--small.el-form-item {
-      margin-bottom: 0;
-    }
-    .el-card__body {
-      padding-top: 24px;
-    }
-    .page-header-senior-btn {
-      float: right;
-    }
-    .el-form-item:not(:first-child) {
-      margin-left: 22px;
-    }
-    .el-button {
-      height: 32px;
-    }
-  }
-  .page-content-card {
-    margin-top: 12px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    height: calc(100%-104px);
-    .el-card__header {
-      & > div {
-        height: 24px;
-        .iconfont {
-          font-size: 12px;
-        }
-      }
-      & > div > span {
-        font-size: 16px;
-        color: #202020;
-        line-height: 24px;
-        font-weight: 700;
-        font-family: "pinfang";
-      }
-    }
-    .el-card__body {
-      flex: 1;
-      overflow: hidden;
-      padding: 0 0 20px;
-    }
-    .table {
-      height: calc(100%-104px);
-      background: red;
-      overflow: hidden;
-    }
-  }
+  height: calc(100% - 50px);
 }
 </style>
+
 

@@ -16,10 +16,13 @@ const router = new VueRouter({
   routes
 })
 
-const HAS_LOGINED = store.state.loginSuccess;
+// var HAS_LOGINED = true;
+
+var HAS_LOGINED = sessionStorage.getItem('loginSuccess');
 // 路由守位
 router.beforeEach((to, from, next) => {
-  to.meta && to.meta.title && setTitle(to.meta.title)
+  HAS_LOGINED = sessionStorage.getItem('loginSuccess');
+  to.meta && to.meta.title && setTitle(to.meta.title);
   if (to.name !== 'login') {
     if (HAS_LOGINED) next()
     else next({ name: 'login' })

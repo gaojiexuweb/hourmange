@@ -11,11 +11,15 @@ export default {
   data() {
     return {};
   },
+  created() {
+    // console.log(this.$store.state.loginSuccess)
+  },
   methods: {
     ...mapMutations(["loginSuccess"]),
     login() {
       this.loginSuccess("true");
-      // this.$router({ path: "/index" });
+      sessionStorage.setItem('loginSuccess', this.$store.state.loginSuccess);
+      this.$router.push({ path: "/index" });
     }
   }
 };
