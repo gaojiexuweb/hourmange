@@ -5,6 +5,7 @@
     <h1>{{$store.state.menuName}}</h1>
     <button @click="handle1">更改菜单名称</button>
     <button @click="handle2">更改菜单名称</button>
+    <input type="text" v-focus>
   </div>
 </template>
 <script>

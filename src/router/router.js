@@ -1,6 +1,5 @@
 import layout from '../views/layout.vue'
 
-
 export default [
     { // 自动跳转路由 
         path: '/',
@@ -10,6 +9,11 @@ export default [
         path: '/login',
         name: 'login',
         component: () => import('@/views/login')
+    },
+    {
+        path: '/register',
+        name: 'register',
+        component: () => import('@/views/register')
     },
     {
         path: '/index',

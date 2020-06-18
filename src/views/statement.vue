@@ -6,7 +6,7 @@
       </div>
       <el-form :inline="true" :model="formInline" class="demo-form-inline" @submit.native.prevent>
         <el-form-item label="报表名称">
-          <el-input v-model.trim="formInline.name" placeholder="请输入报表名称"></el-input>
+          <el-input autofocus v-model.trim="formInline.name" placeholder="请输入报表名称"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" size="small" @click="handleSearch()">查询</el-button>
@@ -22,7 +22,15 @@
         </div>
       </div>
       <div class="table">
-        <el-table :data="tableData" border style="width: 100%">
+        <el-table
+          :data="tableData"
+          border
+          style="width: 100%"
+          v-loading="loading"
+          element-loading-text=""
+          element-loading-spinner="el-icon-loading"
+          element-loading-background="rgba(0, 0, 0, 0.1)"
+        >
           <el-table-column prop="date" label="日期" width="180"></el-table-column>
           <el-table-column prop="name" label="姓名" width="180"></el-table-column>
           <el-table-column prop="address" label="地址"></el-table-column>
@@ -36,8 +44,10 @@ export default {
   name: "Statement",
   data() {
     return {
+      loading: true,
       formInline: {},
-      tableData: [
+      tableData:[],
+      tableData1: [
         {
           date: "2016-05-02",
           name: "王小虎",
@@ -60,6 +70,12 @@ export default {
         }
       ]
     };
+  },
+  created() {
+    setTimeout(() => {
+      this.loading = false;
+      this.tableData = this.tableData1
+    }, 1000);
   },
   methods: {
     handleSearch() {},
