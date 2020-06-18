@@ -65,9 +65,27 @@
 <script>
 import { mapMutations } from "vuex";
 import rules from "@/lib/rules.js";
+
 export default {
   name: "register",
   data() {
+    // let validateConfirmPassword = (rule, value, callback) => {
+    //             if (value == '') {
+    //                 callback(new Error("请输入确认密码"));
+    //             } else if (value !== this.formLabelAlign.password) {
+    //                 callback(new Error("两次密码输入不一致"));
+    //             } else {
+    //                 callback();
+    // };
+    const validateConfirmPassword = (rule, value, callback) => {
+      if (!value) {
+        callback(new Error("请输入密码"));
+      } else if (value !== this.formLabelAlign.password) {
+        callback(new Error("两次密码不一致，请重新输入"));
+      } else {
+        callback();
+      }
+    };
     return {
       formLabelAlign: {},
       rules: {
@@ -113,6 +131,10 @@ export default {
           },
           {
             validator: rules.validPwd,
+            trigger: "blur"
+          },
+          {
+            validator: validateConfirmPassword,
             trigger: "blur"
           }
         ]
