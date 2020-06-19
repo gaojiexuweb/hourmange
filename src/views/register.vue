@@ -53,6 +53,9 @@
             autocomplete="off"
           ></el-input>
         </el-form-item>
+        <el-form-item>
+          <dargComponent @handlerSlide="isdragSuccess"></dargComponent>
+        </el-form-item>
       </el-form>
       <div class="logbtn" @click="register">注册</div>
       <p class="reset">
@@ -65,18 +68,11 @@
 <script>
 import { mapMutations } from "vuex";
 import rules from "@/lib/rules.js";
+import dargComponent from "_c/drag.vue";
 
 export default {
   name: "register",
   data() {
-    // let validateConfirmPassword = (rule, value, callback) => {
-    //             if (value == '') {
-    //                 callback(new Error("请输入确认密码"));
-    //             } else if (value !== this.formLabelAlign.password) {
-    //                 callback(new Error("两次密码输入不一致"));
-    //             } else {
-    //                 callback();
-    // };
     const validateConfirmPassword = (rule, value, callback) => {
       if (!value) {
         callback(new Error("请输入密码"));
@@ -147,14 +143,23 @@ export default {
       this.$refs.formLabelAlign.validate(valid => {
         if (valid) {
           console.log(this.formLabelAlign);
-          this.$router.push({ path: "/login" });
-          this.$message.success("注册成功");
+          if (this.formLabelAlign.isdragSuccess) {
+            this.$router.push({ path: "/login" });
+            this.$message.success("注册成功");
+          }
         }
       });
     },
     login() {
       this.$router.push({ path: "/login" });
+    },
+    isdragSuccess(flag) {
+      console.log(flag);
+      this.formLabelAlign.isdragSuccess = flag;
     }
+  },
+  components: {
+    dargComponent
   }
 };
 </script>
