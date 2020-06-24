@@ -48,65 +48,69 @@ export default {
       isCollapse: false,
       menuList: [
         {
-          name: "导航1",
+          name: "用户管理",
           index: "1",
-          path: "/index/1",
           child: [
             {
-              name: "选项1",
+              name: "用户管理",
               index: "1-1",
-              path: "/index/11",
               child: [
                 {
-                  name: "选项1-1",
-                  path: "/index/111"
+                  name: "用户信息",
+                  path: "/index/information"
                 },
                 {
-                  name: "选项1-2",
-                  path: "/index/112"
+                  name: "用户账号",
+                  path: "/index/account"
                 }
               ]
             },
             {
-              name: "选项12",
+              name: "角色管理",
               index: "1-2",
               child: [
                 {
-                  name: "选项12-12",
-                  path: "/index/12"
+                  name: "超级管理",
+                  path: "/index/super"
                 },
                 {
-                  name: "选项12-22",
-                  path: "/index/121"
+                  name: "普通管理",
+                  path: "/index/role"
                 }
               ]
             },
             {
-              name: "选项13",
-              path: "/index/13"
+              name: "菜单管理",
+              path: "/index/menu"
             },
             {
-              name: "选项14",
-              path: "/index/131"
+              name: "权限管理",
+              path: "/index/author"
             }
           ]
         },
         {
-          name: "导航2",
+          name: "系统日志",
           index: "2",
           child: [
             {
-              name: "选项2",
-              path: "/index/2"
+              name: "登录日志",
+              path: "/index/authLog"
+            },
+            {
+              name: "操作日志",
+              path: "/index/sysLog"
             }
           ]
         },
         {
           name: "工时报表",
+          index: "3",
           path: "/index/statement"
         },
         {
-          name: "导航4",
+          name: "支付报表",
+          index: "4",
           path: "/index/payment"
         }
       ]

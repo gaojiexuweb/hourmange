@@ -11,7 +11,7 @@
           </el-breadcrumb>
         </div>
         <transition name="router">
-          <router-view />
+          <router-view class="rout"/>
         </transition>
       </div>
     </div>
@@ -59,7 +59,6 @@ export default {
       width: calc(100% - 240px);
       margin: 0 20px;
       padding: 0;
-      border: 1px solid #dddddd;
       .bread {
         padding: 10px;
       }
@@ -74,6 +73,9 @@ export default {
       }
       .router-leave {
         opacity: 1;
+      }
+      .rout{
+         height: calc(100% - 50px);
       }
     }
   }

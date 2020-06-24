@@ -22,6 +22,14 @@ export default [
         component: layout,
         children: [
             {
+                path: 'information',
+                name: 'information',
+                meta: {
+                    title: '信息'
+                },
+                component: () => import('@/views/user/information')
+            },
+            {
                 path: 'statement',
                 name: 'Statement',
                 meta: {
