@@ -39,8 +39,22 @@
 <script>
 import { mapMutations } from "vuex";
 import rules from "@/lib/rules";
+let loading;
+function startLoading() {
+  loading = Loading.service({
+    lock: true,
+    text: "拼命加载中。。。",
+    background: "rgba(0,0,0,0.7)"
+  });
+}
+
+function endLoading() {
+  loading.close();
+}
+
 export default {
   name: "login",
+
   data() {
     return {
       formLabelAlign: {
@@ -69,6 +83,10 @@ export default {
     };
   },
   created() {
+    startLoading();
+    setTimeout(() => {
+      endLoading();
+    }, 2000);
     // console.log(this.$store.state.loginSuccess)
   },
   methods: {
