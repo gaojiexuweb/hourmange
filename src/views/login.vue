@@ -25,6 +25,7 @@
             clearable
             placeholder="请输入用户密码"
             autocomplete="new-password"
+            @keyup.enter.native="login"
           ></el-input>
         </el-form-item>
       </el-form>
