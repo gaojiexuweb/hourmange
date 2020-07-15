@@ -112,6 +112,20 @@ export default {
           name: "支付报表",
           index: "4",
           path: "/index/payment"
+        },
+        {
+          name: "地图展示",
+          index: "5",
+          child: [
+            {
+              name: "地图1",
+              path: "/index/mapC"
+            },
+            {
+              name: "地图2",
+              path: "/index/mapT"
+            }
+          ]
         }
       ]
     };

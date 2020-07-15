@@ -1998,7 +1998,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .statement {
-  // height: calc(100% - 50px);
 }
 </style>
 

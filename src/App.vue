@@ -17,7 +17,6 @@ body {
 }
 #app > div {
   height: 100%;
-  // min-width: 1600px;
   overflow: auto;
 }
 </style>

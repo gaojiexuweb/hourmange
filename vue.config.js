@@ -16,5 +16,10 @@ module.exports = {
     productionSourceMap: false,//打包时不生产.map文件  
     devServer: {
         proxy: 'http://172.16.2.222:10100'
+    },
+    configureWebpack: {
+        externals: {
+            'AMap': 'AMap' // 高德地图配置
+        }
     }
 }

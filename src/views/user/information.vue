@@ -48,9 +48,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .information {
-  background: #ffffff;
-  padding: 20px;
-  box-sizing: border-box;
+  // background: #ffffff;
+  // padding: 20px;
+  // box-sizing: border-box;
     .lodash {
       ul{
           list-style: none;

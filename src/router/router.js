@@ -30,6 +30,14 @@ export default [
                 component: () => import('@/views/user/information')
             },
             {
+                path: 'account',
+                name: 'account',
+                meta: {
+                    title: '账号'
+                },
+                component: () => import('@/views/user/account')
+            },
+            {
                 path: 'statement',
                 name: 'Statement',
                 meta: {
@@ -47,7 +55,23 @@ export default [
                 props: {
                     food: 'banana'    //对象模型
                 }
-            }
+            },
+            {
+                path: 'mapC',
+                name: 'mapC',
+                meta: {
+                    title: '地图1'
+                },
+                component: () => import('@/views/map/mapC')
+            },
+            {
+                path: 'mapT',
+                name: 'mapT',
+                meta: {
+                    title: '地图2'
+                },
+                component: () => import('@/views/map/mapT')
+            },
         ],
         // 路由独享守卫
         beforeEnter: ((to, from, next) => {

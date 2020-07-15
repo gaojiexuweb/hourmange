@@ -11,7 +11,7 @@
           </el-breadcrumb>
         </div>
         <transition name="router">
-          <router-view class="rout"/>
+          <router-view class="rout" />
         </transition>
       </div>
     </div>
@@ -32,9 +32,7 @@ export default {
     // next()
   },
   mounted() {},
-  methods: {
-   
-  },
+  methods: {},
   components: {
     AsideBar,
     HeaderBar
@@ -74,8 +72,11 @@ export default {
       .router-leave {
         opacity: 1;
       }
-      .rout{
-         height: calc(100% - 50px);
+      .rout {
+        height: calc(100% - 50px);
+        background: #ffffff;
+        padding: 20px;
+        box-sizing: border-box;
       }
     }
   }
