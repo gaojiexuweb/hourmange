@@ -13,14 +13,26 @@
         active-text-color="#ffd04b"
         style="height:100%;"
       >
-        <div v-for="(item,index) in this.menuList" :key="index">
-          <el-submenu :index="item.index" v-if="item.child">
+        <div
+          v-for="(item,index) in this.menuList"
+          :key="index"
+        >
+          <el-submenu
+            :index="item.index"
+            v-if="item.child"
+          >
             <template slot="title">
               <i class="el-icon-location"></i>
               <span slot="title">{{item.name}}</span>
             </template>
-            <div v-for="(item12,n) in item.child" :key="n">
-              <el-submenu :index="item12.index" v-if="item12.child">
+            <div
+              v-for="(item12,n) in item.child"
+              :key="n"
+            >
+              <el-submenu
+                :index="item12.index"
+                v-if="item12.child"
+              >
                 <template slot="title">{{item12.name}}</template>
                 <el-menu-item
                   :index="item13.path"
@@ -28,10 +40,16 @@
                   :key="i"
                 >{{item13.name}}</el-menu-item>
               </el-submenu>
-              <el-menu-item :index="item12.path" v-else>{{item12.name}}</el-menu-item>
+              <el-menu-item
+                :index="item12.path"
+                v-else
+              >{{item12.name}}</el-menu-item>
             </div>
           </el-submenu>
-          <el-menu-item :index="item.path" v-else>
+          <el-menu-item
+            :index="item.path"
+            v-else
+          >
             <i class="el-icon-setting"></i>
             <span slot="title">{{item.name}}</span>
           </el-menu-item>
@@ -43,7 +61,7 @@
 <script>
 export default {
   name: "asideBar",
-  data() {
+  data () {
     return {
       isCollapse: false,
       menuList: [
@@ -126,15 +144,29 @@ export default {
               path: "/index/mapT"
             }
           ]
+        },
+        {
+          name: "组件管理",
+          index: "6",
+          child: [
+            {
+              name: "全选组件",
+              path: "/index/select"
+            },
+            {
+              name: "步骤条",
+              path: "/index/step"
+            }
+          ]
         }
       ]
     };
   },
   methods: {
-    handleOpen(key, keyPath) {
+    handleOpen (key, keyPath) {
       console.log(key, keyPath);
     },
-    handleClose(key, keyPath) {
+    handleClose (key, keyPath) {
       console.log(key, keyPath);
     }
   }

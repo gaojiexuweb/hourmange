@@ -72,6 +72,22 @@ export default [
                 },
                 component: () => import('@/views/map/mapT')
             },
+             {
+                path: 'select',
+                name: 'select',
+                meta: {
+                    title: '全选组件'
+                },
+                component: () => import('@/views/com/check')
+            },
+            {
+                path: 'step',
+                name: 'step',
+                meta: {
+                    title: '步骤条'
+                },
+                component: () => import('@/views/com/step')
+            },
         ],
         // 路由独享守卫
         beforeEnter: ((to, from, next) => {
