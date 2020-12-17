@@ -5,11 +5,14 @@
     <h1>{{$store.state.menuName}}</h1>
     <button @click="handle1">更改菜单名称</button>
     <button @click="handle2">更改菜单名称</button>
-    <input type="text" v-focus>
+    <input
+      type="text"
+      v-focus
+    >
   </div>
 </template>
 <script>
-import {abandonInfo} from "@/api/user.js";
+import { abandonInfo } from "@/api/user.js";
 import { mapActions } from "vuex";
 export default {
   name: "Payment",
@@ -19,10 +22,10 @@ export default {
       default: "apple"
     }
   },
-  data() {
+  data () {
     return {};
   },
-  created() {
+  created () {
     let data = {
       username: "admin",
       password: "111111"
@@ -33,11 +36,11 @@ export default {
   },
   methods: {
     ...mapActions(["menuName"]),
-    handle1() {
-      this.menuName("陈洁");
+    handle1 () {
+      this.menuName("测试一");
     },
-    handle2() {
-      this.menuName("韦苗苗");
+    handle2 () {
+      this.menuName("测试二");
     }
   }
 };
