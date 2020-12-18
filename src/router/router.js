@@ -95,8 +95,26 @@ export default [
                   title: '图片弹窗'
               },
               component: () => import('@/views/com/img')
-          },
+            },
+            {
+              path: 'echarts',
+              name: 'echarts',
+              meta: {
+                  title: 'echarts'
+              },
+              component: () => import('@/views/com/echarts')
+            },
+            {
+              path: 'process',
+              name: 'process',
+              meta: {
+                  title: '进度条'
+              },
+              component: () => import('@/views/com/process')
+            },
+          
         ],
+
         // 路由独享守卫
         beforeEnter: ((to, from, next) => {
             // if(from.name === 'login') alert ('这是从登录页来的')

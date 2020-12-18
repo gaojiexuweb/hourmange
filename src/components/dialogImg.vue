@@ -86,7 +86,7 @@ export default {
     return {
       swiperOption: {
         speed: 300,
-        grabCursor: true,
+        // grabCursor: true,
         slidesPerView: 6,
         spaceBetween: 10,
         slidesPerGroup: 1,
@@ -100,7 +100,7 @@ export default {
         },
         on: {
           click: function (e) {
-            that.setActiveItem(this.clickedIndex)
+            e && that.setActiveItem(this.clickedIndex)
           }
         }
       }
@@ -135,6 +135,7 @@ export default {
     line-height: 100px;
     .allSwiper {
       width: 100%;
+      // border: 1px solid #ddd;
       .my-button-disabled {
         opacity: 0.2;
       }

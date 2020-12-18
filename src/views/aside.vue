@@ -160,7 +160,16 @@ export default {
             {
               name: "图片弹窗",
               path: "/index/img"
-            }
+            },
+            {
+              name: "echarts",
+              path: "/index/echarts"
+            },
+            {
+              name: "进度条",
+              path: "/index/process"
+            },
+
           ]
         }
       ]

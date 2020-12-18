@@ -45,3 +45,22 @@
         padding: 0 0 20px;
     }
 }
+
+/**************************************** 系统滚动条 ***************************************************/
+
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  border-radius: 3px
+}
+
+ ::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+ ::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  background-clip: padding-box;
+  min-height: 28px;
+  border-radius: 4px;
+}
