@@ -162,7 +162,6 @@ export default {
     }
   },
   created () {
-    this.paging();
   },
   methods: {
     paging () {
@@ -230,9 +229,8 @@ export default {
     checkBox (index, idx, breedType) {
       if (breedType !== 2) {
         // 获取当前列表id
-        let showArr = [];
-        this.showList.map((item) => {
-          showArr.push(this.lodash.at(item, 'id'));
+        let showArr = this.showList.map((item) => {
+          return this.lodash.at(item, 'id')
         });
         // 获取父组件传值id
         let arr = Object.assign([], this.tableListOne);

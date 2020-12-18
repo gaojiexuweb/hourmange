@@ -3,6 +3,7 @@
     <Step
       :active-step="activeStep"
       :list="List"
+      @activeStepChange='activeStepChange'
     />
     <div class="operate-btn-group">
       <el-button
@@ -42,6 +43,9 @@ export default {
     }
   },
   methods: {
+    activeStepChange (val) {
+      this.activeStep = val
+    },
     next () {
       if (this.activeStep < this.List.length) {
         this.activeStep++;

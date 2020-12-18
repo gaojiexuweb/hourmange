@@ -88,6 +88,14 @@ export default [
                 },
                 component: () => import('@/views/com/step')
             },
+            {
+              path: 'img',
+              name: 'img',
+              meta: {
+                  title: '图片弹窗'
+              },
+              component: () => import('@/views/com/img')
+          },
         ],
         // 路由独享守卫
         beforeEnter: ((to, from, next) => {

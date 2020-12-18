@@ -10,6 +10,7 @@
       <el-step
         v-for="(item,index) in list"
         :key="index"
+        @click.native="handleStep(item,index)"
       >
         <template slot="icon">
           <span>{{ index+1 }}</span>
@@ -38,6 +39,15 @@ export default {
         return 0;
       }
     }
+  },
+  data () {
+    return {
+    }
+  },
+  methods: {
+    handleStep (val, index) {
+      this.$emit('activeStepChange', index)
+    }
   }
 };
 </script>
@@ -50,6 +60,7 @@ export default {
   margin: 10px 0 -10px 0;
   .step {
     margin: 0 auto;
+    cursor: pointer;
   }
 }
 .el-steps--simple {

@@ -156,6 +156,10 @@ export default {
             {
               name: "步骤条",
               path: "/index/step"
+            },
+            {
+              name: "图片弹窗",
+              path: "/index/img"
             }
           ]
         }
