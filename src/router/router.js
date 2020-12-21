@@ -112,6 +112,14 @@ export default [
               },
               component: () => import('@/views/com/process')
             },
+            {
+              path: 'eMap',
+              name: 'eMap',
+              meta: {
+                  title: 'echarts地图'
+              },
+              component: () => import('@/views/com/eMap')
+            },
           
         ],
 

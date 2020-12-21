@@ -169,6 +169,10 @@ export default {
               name: "进度条",
               path: "/index/process"
             },
+            {
+              name: "echarts地图",
+              path: "/index/eMap"
+            },
 
           ]
         }
