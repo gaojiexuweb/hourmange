@@ -11,5 +11,6 @@
 测试2.0
 
 release 1.0
+release 2.0
 :wq
 :
