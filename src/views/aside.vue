@@ -173,7 +173,10 @@ export default {
               name: "echarts地图",
               path: "/index/eMap"
             },
-
+            {
+              name: "过滤器",
+              path: "/index/fliter"
+            },
           ]
         }
       ]

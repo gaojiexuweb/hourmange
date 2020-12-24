@@ -120,6 +120,14 @@ export default [
               },
               component: () => import('@/views/com/eMap')
             },
+            {
+              path: 'fliter',
+              name: 'fliter',
+              meta: {
+                  title: '过滤器'
+              },
+              component: () => import('@/views/com/fliter')
+            },
           
         ],
 

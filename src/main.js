@@ -5,6 +5,7 @@ import VueAMap from 'vue-amap';
 import router from './router'
 import store from './store'
 import ElementUI from 'element-ui';
+import './lib'
 import 'element-ui/lib/theme-chalk/index.css';
 import '@/style/common.scss'
 
