@@ -128,6 +128,14 @@ export default [
               },
               component: () => import('@/views/com/fliter')
             },
+            {
+              path: 'grid',
+              name: 'grid',
+              meta: {
+                  title: 'gird布局'
+              },
+              component: () => import('@/views/com/grid')
+            },
           
         ],
 

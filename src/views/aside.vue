@@ -177,6 +177,10 @@ export default {
               name: "过滤器",
               path: "/index/fliter"
             },
+            {
+              name: "grid布局",
+              path: "/index/grid"
+            },
           ]
         }
       ]
